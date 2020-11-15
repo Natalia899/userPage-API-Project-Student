@@ -49,13 +49,10 @@ body {
     text-align: left;
     color: #2c3e50;
     padding: 1vmax;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Nunito', sans-serif;
 }
 
-.quote-container>p {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1vmax;
-}
+
 
 .content-container {
     grid-row: 3;
@@ -101,8 +98,8 @@ button {
 }
 
 #pokemon-image {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     display: inline-block;
     background-size: 100%;
     justify-self: center;
@@ -125,4 +122,12 @@ button {
 .meat-text {
     padding: 1vw;
     font-size: 1vmax;
+   
+}
+.bold{
+font-style: bold; }
+
+#quote-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3vmax;
 }
