@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,64 +15,64 @@
 </head>
 
 <body>
-    <div class="container">	
+    <div class="container">
 
-        <script id="user-template" type="text/x-handlebars-template">
-            <div id="profile-picture">
-                <img src='{{user.imagine}}'>
+        <div class="user-container"></div>
+        <div class="quote-container"></div>
+        <div class="content-container">
+            <div class="pokemon-container"></div>
+            <div class="meat-container"></div>
+        </div>
+        <div class="friends">
+            <h4>Friends</h4>
+            <div class="friends-container">
             </div>
-            <div class="user-info">
-             <p> {{user.fName}} {{user.lName}} </p>
-             <span> {{user.city}} </span> <span> {{user.country}} </span>
-            </div>
-        </script>
-
-        <script id="friends-template" type="text/x-handlebars-template">
-           <ul class='friends-list'> {{#each friends}}
-               <li class='friend'> {{this}}</li>
-            {{/each}}
-           </ul>
-        </script>
-
-        <script id="quote-template" type="text/x-handlebars-template">
-            <p class='bold'>Favorite quote: </p>
-            <p id='quote-text'> {{quote}} </p>
-        </script>
-
-        <script id="pokemon-template" type="text/x-handlebars-template">
-           <div id='pokemon-image'> 
-               <img src='{{pokemon.image}}'>
-           </div>
-           <div id='pokemon-text'>Favorite Pokemon: {{pokemon.name}} </div>
-        </script>
-
-        <script id="about-template" type="text/x-handlebars-template">
-            <p class='meat-text'> About me: <br> {{about}} </p>
-        </script>
-
-        
-        <div class="user-container"></div>	
-        <div class="quote-container"></div>	
-        <div class="content-container">	
-            <div class="pokemon-container"></div>	
-            <div class="meat-container"></div>	
-        </div>	
-        <div class="friends">	
-            <h4>Friends</h4>	
-            <div class="friends-container">	
-            </div>	
-        </div>	
-        <div class="buttons">	
-            <button  onclick="data()">Load User Data</button>	
-            <button onclick="displayData()">Display User</button>	
-        </div>	
+        </div>
+        <div class="buttons">
+            <button onclick="data()">Load User Data</button>
+            <button onclick="displayData()">Display User</button>
+        </div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-<script src='APIManager.js'></script>
-<script src='Renderer.js'></script>
-<script src="main.js"></script>
+
+    <script id="user-template" type="text/x-handlebars-template">
+        <div id="profile-picture">
+            <img src='{{user.imagine}}'>
+        </div>
+        <div class="user-info">
+         <p> {{user.fName}} {{user.lName}} </p>
+         <span> {{user.city}} </span> <span> {{user.country}} </span>
+        </div>
+    </script>
+
+    <script id="friends-template" type="text/x-handlebars-template">
+       <ul class='friends-list'> {{#each friends}}
+           <li class='friend'> {{this}}</li>
+        {{/each}}
+       </ul>
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+        <p class='bold'>Favorite quote: </p>
+        <p id='quote-text'> {{quote}} </p>
+    </script>
+
+    <script id="pokemon-template" type="text/x-handlebars-template">
+       <div id='pokemon-image'> 
+           <img src='{{pokemon.image}}'>
+       </div>
+       <div id='pokemon-text'>Favorite Pokemon: {{pokemon.name}} </div>
+    </script>
+
+    <script id="about-template" type="text/x-handlebars-template">
+        <p class='meat-text'> About me: <br> {{about}} </p>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src='APIManager.js'></script>
+    <script src='Renderer.js'></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

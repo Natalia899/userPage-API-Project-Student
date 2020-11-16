@@ -26,19 +26,18 @@ class APIManager {
     }
 
     getFriends() {
-       // this.data.friends=[]
-        for (let i = 0; i<6; i++) {
             $.ajax({
                 method: 'get',
-                url: 'https://randomuser.me/api/',
+                url: 'https://randomuser.me/api/?results=6',
                 success: (friend) => {
-                    let friendName = friend.results[0].name.first + " " + friend.results[0].name.last
-                    this.data.friends.push(friendName)
+                    this.data.friends=[]
+                    let newArr = friend.results.map( f => f.name.first + " " + f.name.last)
+                    this.data.friends.push(newArr)
 
                 }
             })
         }
-    }
+   
 
     getQuote() {
         $.ajax({

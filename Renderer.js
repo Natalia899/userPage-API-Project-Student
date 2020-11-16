@@ -5,45 +5,42 @@ class Renderer {
    }
    
    userRender() {
-      $('.user-container').empty()
       const source = $('#user-template').html()
       const template = Handlebars.compile(source)
       const userInfo = template(this.data)
-      $('.user-container').append(userInfo)
+      $('.user-container').empty().append(userInfo)
 
    }
 
    friendsRender() {
-      $('.friends-list').empty()
       const source = $('#friends-template').html()
       const template = Handlebars.compile(source)
       const friendsList = template(this.data)
-      $('.friends-container').append(friendsList)
+      $('.friends-container').empty().append(friendsList)
 
    }
 
    quoteRender() {
-      $('.quote-container').empty()
       const source = $('#quote-template').html()
       const template = Handlebars.compile(source)
       const quote = template(this.data)
-      $('.quote-container').append(quote)
+      $('.quote-container').empty().append(quote)
    }
 
    pokemonRender() {
-      $('.pokemon-container').empty()
       const source = $('#pokemon-template').html()
       const template = Handlebars.compile(source)
       const pokemon = template(this.data)
-      $('.pokemon-container').append(pokemon)
+      $('.pokemon-container').empty().append(pokemon)
    }
+
    aboutRender(){
-      $('.meat-container').empty()
       const source = $('#about-template').html()
       const template = Handlebars.compile(source)
       const about = template(this.data)
-      $('.meat-container').append(about)
+      $('.meat-container').empty().append(about)
    }
+   
    mainRender(){
       this.userRender()
       this.friendsRender()
