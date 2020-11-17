@@ -1,8 +1,5 @@
 
 class Renderer {
-   constructor(data) {
-   this.data = data
-   }
    
    userRender() {
       const source = $('#user-template').html()
@@ -41,7 +38,7 @@ class Renderer {
       $('.meat-container').empty().append(about)
    }
    
-   mainRender(){
+   mainRender(data){
       this.userRender()
       this.friendsRender()
       this.quoteRender() 

@@ -16,11 +16,12 @@ class APIManager {
             method: 'GET',
             url: 'https://randomuser.me/api/',
             success:  (users) => {
-                this.data.user.fName = users.results[0].name.first
-                this.data.user.lName = users.results[0].name.last
-                this.data.user.city = users.results[0].location.city
-                this.data.user.country = users.results[0].location.country
-                this.data.user.imagine = users.results[0].picture.thumbnail
+                let person = users.results[0]
+                this.data.user.fName = person.name.first
+                this.data.user.lName = person.name.last
+                this.data.user.city = person.location.city
+                this.data.user.country = person.location.country
+                this.data.user.imagine = person.picture.thumbnail
             }
         })
     }
@@ -30,10 +31,7 @@ class APIManager {
                 method: 'get',
                 url: 'https://randomuser.me/api/?results=6',
                 success: (friend) => {
-                    this.data.friends=[]
-                    let newArr = friend.results.map( f => f.name.first + " " + f.name.last)
-                    this.data.friends.push(newArr)
-
+                    this.data.friends=friend.results.map( f => f.name.first + " " + f.name.last)
                 }
             })
         }
